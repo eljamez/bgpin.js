@@ -1,0 +1,2 @@
+*bgpin.js
+***coming soon
