@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>jquery.bgpin.js - A jQuery plugin for articles and stories.</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/modernizr-2.6.1.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+				<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+<header>
+	<h1>BGpin.js</h1>
+	<p>A jQuery plugin for full screen backgrounds that stick and fade.</p>
+</header>
+<section class="intro">
+	<div class="section-content">
+		<h2>BGpin allows you to create a cool fixed background effect on web pages.</h2>
+		<h4>The background images cover the entire page and are stationary (fixed) while the text continues to scroll in the 
+		foreground.</h4>
+	</div>
+</section>
+<section class="clearfix">
+	<h2>For Example, Turn this....</h2>
+	<div class="bgpin-group">
+		<div class="bgpin-single bg-pin-single-1">
+			<div class="bgpin-single-content">
+				<h1>Text over an image</h1>
+			</div>
+		</div>
+		<div class="bgpin-single bg-pin-single-2">
+			<div class="bgpin-single-content">
+				<h1>Helps to tell a story</h1>
+			</div>
+		</div>
+		<div class="bgpin-single bg-pin-single-3">
+			<div class="bgpin-single-content">
+				<h1>or add excitement to a blog post</h1>
+			</div>
+		</div>
+		<div class="bgpin-single bg-pin-single-4">
+			<div class="bgpin-single-content">
+				<h1>with visually stimulating imagery</h1>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="clearfix">
+	<h2>... into this</h2>
+	<div class="bgpin-group bgpin-group-active">
+		<div class="bgpin-single bg-pin-single-1">
+			<div class="bgpin-single-content">
+				<h1>Text over an image</h1>
+			</div>
+		</div>
+		<div class="bgpin-single bg-pin-single-2">
+			<div class="bgpin-single-content">
+				<h1>Helps to tell a story</h1>
+			</div>
+		</div>
+		<div class="bgpin-single bg-pin-single-3">
+			<div class="bgpin-single-content">
+				<h1>or add excitement to a blog post</h1>
+			</div>
+		</div>
+		<div class="bgpin-single bg-pin-single-4">
+			<div class="bgpin-single-content">
+				<h1>with visually stimulating imagery</h1>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="section-content">
+		<h4>hopefully, it's just that easy</h4>
+	<div class="section-content">
+</section>
+<section class="the-code">
+	<div class="section-content">
+		<h2>The Code</h2>
+		<h3>The HTML</h3>
+		<p>Add as many "bgpin-single" divs as you like, they will be the sections with the background images.</p>
+		<p>They must all be contained within the bgpin-group div.</p>
+		<code>
+			&lt;div class="bgpin-group"&gt;&lt;!-- the parent container --&gt;<br>
+			<br>
+			&nbsp;&lt;div class="bgpin-single your-bgpin-single-first-background"&gt;&lt;!-- add as many as you like --&gt;<br>
+			&nbsp;&nbsp;&lt;div class="bgpin-single-content"&gt;<br>
+			&nbsp;&nbsp;&nbsp;&lt;!-- your content here, style as you like --&gt;<br>
+			&nbsp;&nbsp;&lt;/div&gt;&lt;!-- /.bgpin-single-content --&gt;<br>
+			&nbsp;&lt;/div&gt;&lt;!-- /.bgpin-single --&gt;<br>
+			<br><br><i>another added like above (need at least two for the effect to work)</i><br><br>
+			&nbsp;&lt;div class="bgpin-single your-bgpin-single-second-background"&gt...<br>
+			<br>
+			&lt;/div&gt;&lt;!-- /.bgpin-group --&gt;<br>
+		</code>
+		<h3>The CSS</h3>
+		<p>The container element (a generic div with the class .bgpin-group) is what will be targeted by the JavaScript.</p>
+		<p>The child elements (.bgpin-single) will need background images attached</p>
+		<code>
+			.bgpin-group {<br>
+			&nbsp;min-height: 100%;<br>
+			&nbsp;position: relative;<br>
+			&nbsp;width: 100%;<br>
+			}<br>
+			.bgpin-single{<br>
+			&nbsp;background-size: cover;<br>
+			&nbsp;height: 100vh;<br>
+			&nbsp;position: relative;<br>
+			&nbsp;width: 100%;<br>
+			}<br>
+			<br><br>
+			<i>add your background images</i>
+			<br><br>
+			.your-bgpin-single-first-background {<br>
+			&nbsp;background-image: url('path-to-your-image');<br>
+			}<br>
+			.your-bgpin-single-second-background {<br>
+			&nbsp;background-image: url('path-to-your-image');<br>
+			}
+	
+		</code>
+		<h3>The JavaScript / jQuery</h3>
+		<p>Just add "bgpin()" to your parent holder element.</p>
+		<code>
+			$('.bgpin-group').bgpin()
+		</code>
+	</div>
+</section>
+<section>
+	<h3>There you have it. Enjoy.</h3>
+</section>
+
+<footer>
+	<ul>
+		<li><a href="https://github.com/eljamez/bgpin.js">Github</a></li>
+		<li><a href="http://eljamez.com">Made by eljamez</a></li>
+	</ul>
+</footer>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-2.1.0.min.js"><\/script>')</script>
+<script src="../dist/jquery.bgpin.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

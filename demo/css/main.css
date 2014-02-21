@@ -1,0 +1,97 @@
+html, body {
+  font-family: 'Lato', sans-serif;
+}
+
+section {
+  box-sizing: Border-box;
+  padding: 50px 0;
+  position: relative;
+  text-align: center;
+}
+
+.section-content {
+  margin: 0px auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+}
+
+header {
+  background: rgba(0,0,0,0.8);
+  color: white;
+  overflow: auto;
+  padding: 60px 0 60px;
+  text-align: center;
+}
+
+header h1{
+  font-size: 4em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.intro {
+  min-height: 100%;
+}
+
+code {
+  background: rgba(0,0,0,0.1);
+  border-left: 1px solid rgba(0,0,0,0.8);
+  border-right: 1px solid rgba(0,0,0,0.8);
+  display: block;
+  padding: 20px 50px;
+  text-align: left;
+}
+code i {
+  font-family: 'Lato', sans-serif;
+}
+
+.bgpin-group {
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+}
+.bgpin-single{
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+.bg-pin-single-1{
+  background-image: url('../img/example_bg_1.jpg');
+}
+.bg-pin-single-2{
+  background-image: url('../img/example_bg_2.jpg');
+}
+.bg-pin-single-3{
+  background-image: url('../img/example_bg_3.jpg');
+}
+.bg-pin-single-4{
+  background-image: url('../img/example_bg_4.jpg');
+}
+.bgpin-single-content {
+  color: white;
+  padding: 50px;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+}
+footer {
+  background: rgba(0,0,0,0.8);
+  color: white;
+  overflow: auto;
+  padding: 20px 0 30px;
+  text-align: center;
+}
+footer ul {
+  list-style: none;
+}
+footer li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+footer a {
+  color: white;
+}
