@@ -6,19 +6,14 @@ This plugin allows for full screen background images to stay fixed and fade in a
 
 ## Usage
 
-1. Include jQuery:
+1. Include jQuery and plugin:
 
 	```html
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	```
-
-2. Include plugin's code:
-
-	```html
 	<script src="js/jquery.bgpin.js"></script>
 	```
 
-3. Include plugin's code:
+2. Include HTML code:
 
 	```html
 	<div class="bgpin-group"><!-- the parent container -->
@@ -34,6 +29,7 @@ This plugin allows for full screen background images to stay fixed and fade in a
 	</div><!-- /.bgpin-group -->
 	```
 
+3. Include CSS:
 	```css
 	.bgpin-group {
 		min-height: 100%;
