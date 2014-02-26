@@ -1,11 +1,12 @@
 // jquery.bgpin.js
 // Background Fixing with scrolling foregrounds.
+
 (function($){
   jQuery.fn.bgpin = function(){
 
     // set variables
     var $window = $(window),
-          $this = $(this),
+          $this = this,
           bgpin_count = $this.find('.bgpin-single').length,
           bgpin_info_each = {},
           scroll_top,
@@ -69,5 +70,8 @@
         $pinned_bg.fadeOut();
       }
     }
+
+    // make it chainable, though I don't know why you would chain this.
+    return this;
   };
 })( jQuery );

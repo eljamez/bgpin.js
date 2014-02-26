@@ -58,3 +58,6 @@ This plugin allows for full screen background images to stay fixed and fade in a
 	```javascript
 	$('.bgpin-group').bgpin()
 	```
+
+## demo
+<a href="http://eljamez.com/bgpin/">View the live demo.</a>
