@@ -1,4 +1,4 @@
-# bgpin.js
+# jquery.bgpin
 
 ### A jQuery plugin for pinnig backgrounds
 
