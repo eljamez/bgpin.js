@@ -4,6 +4,7 @@ html, body {
 
 section {
   box-sizing: Border-box;
+  overflow: hidden;
   padding: 50px 0;
   position: relative;
   text-align: center;
@@ -56,7 +57,7 @@ code i {
 }
 .bgpin-single{
   background-size: cover;
-  height: 100vh;
+  /*height: 100vh;*/
   position: relative;
   width: 100%;
 }
