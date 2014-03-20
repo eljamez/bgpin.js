@@ -1,5 +1,7 @@
 # jquery.bgpin
 
+## under construnction (remeber those gifs?)
+
 ### A jQuery plugin for pinnig backgrounds
 
 This plugin allows for full screen background images to stay fixed and fade in and out as you scroll through sections on a page. Adds a nice touch to a page such as a blog post or informational page where plain ol moving backgorunds just won't cut it.
