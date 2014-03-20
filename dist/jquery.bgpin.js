@@ -4,6 +4,17 @@
 (function($){
   jQuery.fn.bgpin = function(options){
 
+    // check and set mobile var
+    if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) isMobile = true;
+
+    if(isMobile === true){
+      console.log('mobile');
+      $('.bgpin-single').css({'height':'100%'});
+    } else {
+      //$('.bgpin-single').css({'height':'100vh'});
+      //this.css({'height':(bgpin_count * 100)+'%'});
+    }
+
     // set variables
     var opts = $.extend({}, $.fn.bgpin.defaults, options),
           $window = $(window),
@@ -25,16 +36,6 @@
           top_and_bottoms = [],
           last_showing_bg = 0,
           current_showing_bg = 1;
-
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) isMobile = true;
-
-    if(isMobile === true){
-      console.log('mobile');
-      //$('.bgpin-single').css({'height':'100%'});
-    } else {
-      $('.bgpin-single').css({'height':'100vh'});
-      $this.css({'height':(bgpin_count * 100)+'%'});
-    }
 
     // set the switch align
     if(opts.switchAlign === 'top') switch_scroll_position_check = 0;
@@ -88,6 +89,8 @@
           }
         } else {
           $('.background_imgs').css({'position': 'absolute'});
+          // set the bottom 2 to stay at the botom.
+          $('.background_imgs-'+(bgpin_count-1)).css({'bottom':0,'top':'auto'});
           $('.background_imgs-'+bgpin_count).css({'bottom':0,'top':'auto'});
         }
         // fade the sections in and out
@@ -238,12 +241,12 @@
     function bg_fade(in_or_out, $pinned_bg){
       if(in_or_out == 'in') {
         //$pinned_bg.fadeIn();
-        $pinned_bg.stop(true,true).animate({'opacity':1},'slow');
+        $pinned_bg.stop(true,true).animate({'opacity':1},'fast');
         //$pinned_bg.fadeTo('slow',1);
       }
       if(in_or_out == 'out') {
         //$pinned_bg.fadeOut();
-        $pinned_bg.stop(true,true).animate({'opacity':0},'slow');
+        $pinned_bg.stop(true,true).animate({'opacity':0},'fast');
         //$pinned_bg.fadeTo('slow',0);
       }
     }

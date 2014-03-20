@@ -57,7 +57,7 @@ code i {
 }
 .bgpin-single{
   background-size: cover;
-  /*height: 100vh;*/
+  height: 100vh;
   position: relative;
   width: 100%;
 }

@@ -1,5 +1,5 @@
 (function() {
   
-  $('.bgpin-group-active').bgpin();
+  $('.bgpin-group-active').bgpin({switchAlign:'top'});
 
 }).call(this);
